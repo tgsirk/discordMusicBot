@@ -52,9 +52,11 @@ for(const item in emojis.data){
 client.on('messageReactionAdd', async (reaction, user) => {
     await listenReaction(reaction,user);
 })
+
 client.on('messageReactionRemove', async (reaction, user) => {
     await listenReaction(reaction,user);
 })
+
 client.login(token);
 
 function listenReaction(reaction, user) {

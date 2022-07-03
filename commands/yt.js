@@ -31,29 +31,6 @@ function getEmbed (info) {
         .setFooter({text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png'})
 }
 
-function getActionRow() {
-
-    let row = new MessageActionRow()
-
-    let playPauseButton = new MessageButton()
-        .setCustomId("playPauseButton")
-        .setStyle("PRIMARY")
-        .setLabel("\:play_pause:");
-
-    let nextTrackButton = new MessageButton()
-        .setCustomId("nextTrack")
-        .setStyle("SUCCESS")
-        .setLabel('\:track_next:');
-
-    let prevTrackButton = new MessageButton()
-        .setCustomId("previousTrack")
-        .setStyle("SUCCESS")
-        .setLabel("\:track_previous:");
-
-    return row.addComponents(playPauseButton,prevTrackButton,nextTrackButton)
-
-}
-
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('yt')
